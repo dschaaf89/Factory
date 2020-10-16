@@ -66,7 +66,7 @@ This Project was to show my understanding of many to many relationships. this pr
 
 ## Known Bugs
 
-Built the program under the wrong root folder. [fixed but the commit history is at https://github.com/dschaaf89/Factory ] 
+Built the program under the wrong root folder. [fixed but the commit history is at https://github.com/dschaaf89/Factory2 ] 
 
 the picture on the readme.md shows on readme.md preview but doesnt show on gitHub.
 
@@ -74,7 +74,7 @@ the picture on the readme.md shows on readme.md preview but doesnt show on gitHu
 
 Main Programs
 * MySQL
-* C# / ASP.NET Core 
+* C# / ASP.NET Core a
 * MVC
 * CSS
 * Bootstrap
