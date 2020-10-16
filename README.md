@@ -66,7 +66,9 @@ This Project was to show my understanding of many to many relationships. this pr
 
 ## Known Bugs
 
-Built the program under the wrong root folder.
+Built the program under the wrong root folder. [fixed but the commit history is at https://github.com/dschaaf89/Factory ] 
+
+the picture on the readme.md shows on readme.md preview but doesnt show on gitHub.
 
 ## Technologies Used
 
