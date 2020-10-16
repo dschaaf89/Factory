@@ -1,0 +1,27 @@
+@{
+  Layout = "_Layout";
+}
+@using Factory.Models;
+
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>@Model.Name Page</h1>
+  </div>
+  @if(Model.EngineerMachine.Count == 0)
+  {
+    <p>@Model.Name has no Engineers able to fix.Please hire a @Model.Name specialist to Fix.</p>
+  }
+  <ol>
+    <p>these Engineer's can the fix @Model.Name</p>
+    @foreach (EngineerMachine engineerMachine in Model.EngineerMachine)
+    {
+        <li>@engineerMachine.Engineer.Name</li>
+    }
+  </ol>
+  <button class="btn btn-outline-dark" onclick="window.location.href='/Machines/AddEngineer/@Model.MachineId'">Add a Engineer</button>
+  <button class="btn btn-outline-dark" onclick="window.location.href='/Machines'">Machines</button>
+  @Html.ActionLink("Delete","Delete", new {id = Model.MachineId}, new{@class="btn btn-outline-dark"})
+
+
+</div>

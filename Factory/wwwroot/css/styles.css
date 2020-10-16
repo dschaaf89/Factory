@@ -1,0 +1,67 @@
+﻿body{
+  background-color:#9DC88D
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+/* Style the navbar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+.container{
+  margin-top: 50px;
+}
+.jumbotron{
+  background-color:#DCE1E3;
+  text-align: center;
+  color:#9DC88D;
+}
+#photo{
+  
+
+  border: 50% solid black;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: block;
+  margin-left: auto;
+  margin-Right: auto;
+  box-shadow: 0 8px 24px 0 black;
+  
+  
+}
+.CenterButtons{
+  text-align: center;
+}
+.btn{
+  
+  background-color:#DCE1E3
+}
+
+div#footer {
+  
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  color:#CCC;
+  background:#333;
+  padding:8px;
+}

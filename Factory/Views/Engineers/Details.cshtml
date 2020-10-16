@@ -1,0 +1,34 @@
+@{
+  Layout = "_Layout";
+}
+@using Factory.Models;
+
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>@Model.Name Page</h1>
+  </div>
+  @if(Model.EngineerMachine.Count == 0)
+  {
+    <p>@Model.Name has no Machines Licensed to Fix.</p>
+  }
+  <p>@Model.Name is licensed to Fix</p>
+  <ol>
+    @foreach (EngineerMachine engineerMachine in Model.EngineerMachine)
+    {
+        <li>@engineerMachine.Machine.Name</li>
+    }
+  </ol>
+  <p>@Model.Name has these Licenses</p>
+    <ol>
+    @foreach (EngineerLicense engineerLicense in Model.EngineerLicense)
+    {
+        <li>@engineerLicense.License.LicenseType</li>
+    }
+  </ol>
+  <button class="btn btn-outline-dark" onclick="window.location.href='/Engineers/AddLicense/@Model.EngineerId'">Add a License</button>
+  <button class="btn btn-outline-dark" onclick="window.location.href='/Engineers'">Engineers</button>
+  @Html.ActionLink("Delete","Delete", new {id = Model.EngineerId}, new{@class="btn btn-outline-dark"})
+
+
+</div>
