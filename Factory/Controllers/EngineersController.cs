@@ -35,20 +35,20 @@ namespace Factory.Controllers
       Engineer model = _db.Engineers.FirstOrDefault(x => x.EngineerId == id);
       return View(model); 
     }
-    public ActionResult AddLicense(int id)
+    public ActionResult AddMachine(int id)
     {
       Engineer thisEngineer = _db.Engineers.FirstOrDefault(s => s.EngineerId == id);
-      ViewBag.LicenseId = new SelectList(_db.Licenses, "LicenseId", "LicenseType");
+      ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Name");
       return View(thisEngineer);
     }
     [HttpPost]
-    public ActionResult AddLicense(EngineerLicense engineerLicense)
+    public ActionResult AddMachine(EngineerMachine engineerMachine)
     {
-      if (engineerLicense.LicenseId != 0)
+      if (engineerMachine.MachineId != 0)
       {
-        if (_db.EngineerLicenses.Where(x => x.EngineerId == engineerLicense.EngineerId && x.LicenseId == engineerLicense.LicenseId).ToHashSet().Count == 0)
+        if (_db.EngineerMachines.Where(x => x.EngineerId == engineerMachine.EngineerId && x.MachineId == engineerMachine.MachineId).ToHashSet().Count == 0)
         {
-          _db.EngineerLicenses.Add(engineerLicense);
+          _db.EngineerMachines.Add(engineerMachine);
         }
       }
       _db.SaveChanges();

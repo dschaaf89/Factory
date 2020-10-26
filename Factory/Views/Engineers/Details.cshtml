@@ -28,7 +28,10 @@
   </ol>
   <button class="btn btn-outline-dark" onclick="window.location.href='/Engineers/AddLicense/@Model.EngineerId'">Add a License</button>
   <button class="btn btn-outline-dark" onclick="window.location.href='/Engineers'">Engineers</button>
+  <button class="btn btn-outline-dark" onclick="window.location.href='/Engineers/AddMachine/@Model.EngineerId'">Add a Machine</button>
+   <button class="btn btn-outline-dark" onclick="window.location.href='/Engineers/DeleteMachine/@Model.EngineerId'">Delete a Machine</button>
   @Html.ActionLink("Delete","Delete", new {id = Model.EngineerId}, new{@class="btn btn-outline-dark"})
+
 
 
 </div>
